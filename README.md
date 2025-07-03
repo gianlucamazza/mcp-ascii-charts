@@ -20,8 +20,11 @@ A Model Context Protocol server for generating ASCII charts directly in your ter
 ## 🚀 Quick installation
 
 ```bash
-# Install the server
+# Install from npm
 npm install -g mcp-ascii-charts
+
+# Or install from GitHub
+npm install -g git+https://github.com/gianlucamazza/mcp-ascii-charts.git
 
 # Add to your MCP configuration
 {
@@ -89,4 +92,50 @@ QA        ███████████████████████�
 ## 🎨 Customization
 
 - **Dimensions**: Configure width and height
-- **Colors**: ANSI color su
+- **Colors**: ANSI color support (12 colors available)
+- **Flexible data input**: Arrays with optional labels
+- **Unicode rendering**: Box-drawing characters for smooth visuals
+
+## 🛠️ Development
+
+```bash
+# Clone the repository
+git clone https://github.com/gianlucamazza/mcp-ascii-charts.git
+cd mcp-ascii-charts
+
+# Install dependencies
+npm install
+
+# Run in development mode
+npm run dev
+
+# Run tests
+npm test
+
+# Build for production
+npm run build
+```
+
+## 📚 Documentation
+
+- [Contributing Guidelines](CONTRIBUTING.md)
+- [Changelog](CHANGELOG.md)
+- [API Reference](https://github.com/gianlucamazza/mcp-ascii-charts/wiki)
+
+## 🐛 Issues & Support
+
+- [Report Issues](https://github.com/gianlucamazza/mcp-ascii-charts/issues)
+- [Feature Requests](https://github.com/gianlucamazza/mcp-ascii-charts/issues/new?template=feature_request.md)
+- [Bug Reports](https://github.com/gianlucamazza/mcp-ascii-charts/issues/new?template=bug_report.md)
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+## 🙏 Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and contribute to the project.
+
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=gianlucamazza/mcp-ascii-charts&type=Date)](https://star-history.com/#gianlucamazza/mcp-ascii-charts&Date)

@@ -26,8 +26,16 @@
     "visualization",
     "graphs"
   ],
-  "author": "",
+  "author": "Gianluca Mazza <gianluca@example.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gianlucamazza/mcp-ascii-charts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gianlucamazza/mcp-ascii-charts/issues"
+  },
+  "homepage": "https://github.com/gianlucamazza/mcp-ascii-charts#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0"
   },
