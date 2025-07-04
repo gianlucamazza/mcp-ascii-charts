@@ -134,7 +134,8 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## 🙏 Contributing
 
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and contribute to the project.
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull
+requests, report issues, and contribute to the project.
 
 ## ⭐ Star History
 
