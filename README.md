@@ -27,14 +27,25 @@ A Model Context Protocol server for generating ASCII charts directly in your ter
 
 Available on [npm](https://www.npmjs.com/package/mcp-ascii-charts)
 
+### Step 1: Install globally
+
 ```bash
-# Install from npm
+# Install globally from npm (required for MCP servers)
 npm install -g mcp-ascii-charts
 
 # Or install from GitHub
 npm install -g git+https://github.com/gianlucamazza/mcp-ascii-charts.git
+```
 
-# Add to your MCP configuration
+### Step 2: Configure your MCP client
+
+Add to your Claude Desktop configuration file:
+
+**macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`  
+**Windows**: `%APPDATA%\Claude\claude_desktop_config.json`  
+**Linux**: `~/.config/Claude/claude_desktop_config.json`
+
+```json
 {
   "mcpServers": {
     "ascii-charts": {
@@ -43,6 +54,10 @@ npm install -g git+https://github.com/gianlucamazza/mcp-ascii-charts.git
   }
 }
 ```
+
+### Step 3: Restart Claude Desktop
+
+After configuration, restart Claude Desktop to load the MCP server.
 
 ## 💡 Usage examples
 
