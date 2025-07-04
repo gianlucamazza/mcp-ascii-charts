@@ -1,6 +1,10 @@
 # mcp-ascii-charts
 
 [![npm version](https://badge.fury.io/js/mcp-ascii-charts.svg)](https://www.npmjs.com/package/mcp-ascii-charts)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js CI](https://github.com/gianlucamazza/mcp-ascii-charts/actions/workflows/ci.yml/badge.svg)](https://github.com/gianlucamazza/mcp-ascii-charts/actions/workflows/ci.yml)
+[![npm downloads](https://img.shields.io/npm/dm/mcp-ascii-charts.svg)](https://www.npmjs.com/package/mcp-ascii-charts)
+[![GitHub stars](https://img.shields.io/github/stars/gianlucamazza/mcp-ascii-charts.svg?style=social)](https://github.com/gianlucamazza/mcp-ascii-charts)
 
 A Model Context Protocol server for generating ASCII charts directly in your terminal.
 
