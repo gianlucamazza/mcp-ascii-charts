@@ -1,6 +1,6 @@
 {
   "name": "mcp-ascii-charts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Model Context Protocol server for generating ASCII charts directly in your terminal.",
   "type": "module",
   "main": "dist/index.js",
