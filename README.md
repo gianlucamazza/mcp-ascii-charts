@@ -1,5 +1,7 @@
 # mcp-ascii-charts
 
+[![npm version](https://badge.fury.io/js/mcp-ascii-charts.svg)](https://www.npmjs.com/package/mcp-ascii-charts)
+
 A Model Context Protocol server for generating ASCII charts directly in your terminal.
 
 ## 🎯 Features
@@ -18,6 +20,8 @@ A Model Context Protocol server for generating ASCII charts directly in your ter
 - **Sparkline** - Inline mini-charts
 
 ## 🚀 Quick installation
+
+Available on [npm](https://www.npmjs.com/package/mcp-ascii-charts)
 
 ```bash
 # Install from npm
