@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "ascii-charts": {
+      "command": "mcp-ascii-charts"
+    }
+  }
+} 

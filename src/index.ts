@@ -4,6 +4,7 @@ import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import {
   CallToolRequestSchema,
   ErrorCode,
+  InitializeRequestSchema,
   ListToolsRequestSchema,
   McpError,
 } from '@modelcontextprotocol/sdk/types.js';
@@ -35,7 +36,23 @@ const server = new Server(
   }
 );
 
+// Handle initialization
+server.setRequestHandler(InitializeRequestSchema, async (request) => {
+  console.error('[DEBUG] Initialize request received:', request.params);
+  return {
+    protocolVersion: "2024-11-05",
+    capabilities: {
+      tools: {},
+    },
+    serverInfo: {
+      name: "mcp-ascii-charts",
+      version: "1.0.0",
+    },
+  };
+});
+
 server.setRequestHandler(ListToolsRequestSchema, async () => {
+  console.error('[DEBUG] List tools request received');
   return {
     tools: [
       {
@@ -407,8 +424,11 @@ async function main() {
     logger.info('Transport configuration loaded', { type: transportConfig.type });
     
     // Create and connect transport
+    console.error('[DEBUG] Creating transport with config:', transportConfig);
     const transport = createTransport(transportConfig);
+    console.error('[DEBUG] Connecting transport to server...');
     await transport.connect(server);
+    console.error('[DEBUG] Transport connected, server ready');
     
     // Log successful startup
     logger.info('MCP ASCII Charts server running', {
@@ -433,9 +453,18 @@ async function main() {
   }
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main().catch((error) => {
-    console.error('Server failed to start:', error);
-    process.exit(1);
-  });
-}
+// Add error handlers for uncaught exceptions and promise rejections
+process.on('uncaughtException', (error) => {
+  console.error('[FATAL] Uncaught exception:', error);
+  process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('[FATAL] Unhandled rejection at:', promise, 'reason:', reason);
+  process.exit(1);
+});
+
+main().catch((error) => {
+  console.error('[FATAL] Server failed to start:', error);
+  process.exit(1);
+});
